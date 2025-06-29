@@ -129,6 +129,7 @@ p {
 
 ul {
     line-height: 5;
+    list-style-type: none;
 }
 
 /* Contacto */
