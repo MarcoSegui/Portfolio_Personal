@@ -1,0 +1,313 @@
+body      {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#header   {
+    background: #000;
+    height: 30vh;
+    min-height: 200px;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: all 0.4s cubic-bezier(0.33, 1, 0.68, 1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Imagenes */
+.header_img {
+    height: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+}
+
+.img_perfil {
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    border: 4px solid #00a8e8;
+    object-fit: cover;
+    transition: all 0.4s ease;
+}
+
+.img_logo   {
+    width: 50px;
+    height: 50px;
+}
+
+.img_PY   {
+    width: 30%;
+}
+
+.img_emoticon   {
+    width: 8%;
+    position: relative;
+    top: 7px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+
+}
+
+/* Barra de navegacion */
+#barra_navegacion {
+    height: 25%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+}
+
+#barra_navegacion ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 150px;
+}
+
+#barra_navegacion ul li a { /* le da formato al texto de la barra de navegacion */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+#barra_navegacion ul li a:hover { /* sombrea las letras con color al pasar el mouse por encima */
+    color: #00a8e8; 
+}
+
+main {  /* empuja el contenido para que no quede detras del header */
+    margin-top: 40vh; 
+    padding: 40px 0;
+    flex-grow: 1;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.section {
+    padding: 60px 0;
+    line-height: 2.5;
+    
+}
+
+h1 {
+    color: #000000;
+    border-bottom: 2px solid #00a8e8;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #00a8e8;
+    margin-top: 30px;
+}
+
+p {
+    line-height: 2.5;
+}
+
+ul {
+    line-height: 5;
+}
+
+/* Contacto */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.contact-info {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.formulario {
+    margin-bottom: 20px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+footer {
+    background: #000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #00a8e8;
+}
+
+/*Sistema responsive*/
+
+/* Tablets (768px a 1199px) */
+@media (max-width: 1199px) {
+    main {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    
+    #barra_navegacion ul {
+        gap: 100px;
+    }
+    
+    .section ul {
+        gap: 100px;
+    }
+    
+    .img_PY {
+        width: 40%;
+    }
+    
+    .img_emoticon {
+        width: 10%;
+    }
+}
+
+/* Tablets pequeñas (576px a 767px) */
+@media (max-width: 767px) {
+    main {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 35vh;
+    }
+    
+    #barra_navegacion ul {
+        gap: 50px;
+    }
+    
+    .section ul {
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+    
+    .img_perfil {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .img_PY {
+        width: 50%;
+    }
+    
+    .img_emoticon {
+        width: 12%;
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Smartphones (hasta 575px) */
+@media (max-width: 575px) {
+    body {
+        font-size: 14px;
+    }
+    
+    #header {
+        height: 25vh;
+    }
+    
+    main {
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-top: 30vh;
+    }
+    
+    #barra_navegacion ul {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    #barra_navegacion ul li a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+    
+    .section ul {
+        gap: 20px;
+    }
+    
+    .img_perfil {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .img_PY {
+        width: 70%;
+    }
+    
+    .img_emoticon {
+        width: 15%;
+    }
+    
+    .section {
+        padding: 30px 0;
+        line-height: 1.8;
+    }
+    
+    p {
+        line-height: 1.8;
+    }
+    
+    h1 {
+        font-size: 1.5em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    }
+}
+
+/* Smartphones muy pequeños (hasta 360px) */
+@media (max-width: 360px) {
+    #barra_navegacion ul {
+        gap: 10px;
+    }
+    
+    .img_perfil {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .img_logo {
+        width: 40px;
+        height: 40px;
+    }
+}
